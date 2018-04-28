@@ -4,7 +4,7 @@
 #
 Name     : R-htmlwidgets
 Version  : 1.0
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/htmlwidgets_1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlwidgets_1.0.tar.gz
 Summary  : HTML Widgets for R
