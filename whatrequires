@@ -28,6 +28,8 @@ R-gmodels
 R-gmp
 R-htmlTable
 R-klaR
+R-leaflet
+R-manipulateWidget
 R-mi
 R-modelr
 R-mvoutlier
