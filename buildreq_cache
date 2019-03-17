@@ -1,4 +1,9 @@
 1.3
 R-htmltools
+R-httpuv
 R-jsonlite
+R-markdown
+R-mime
 R-shiny
+R-xtable
+R-yaml

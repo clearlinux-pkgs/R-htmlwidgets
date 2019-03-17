@@ -4,23 +4,29 @@
 #
 Name     : R-htmlwidgets
 Version  : 1.3
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/htmlwidgets_1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlwidgets_1.3.tar.gz
 Summary  : HTML Widgets for R
 Group    : Development/Tools
 License  : MIT
-Requires: R-htmltools
-Requires: R-jsonlite
-Requires: R-shiny
+Requires: R-httpuv
+Requires: R-markdown
+Requires: R-mime
+Requires: R-xtable
+Requires: R-yaml
 BuildRequires : R-htmltools
+BuildRequires : R-httpuv
 BuildRequires : R-jsonlite
+BuildRequires : R-markdown
+BuildRequires : R-mime
 BuildRequires : R-shiny
+BuildRequires : R-xtable
+BuildRequires : R-yaml
 BuildRequires : buildreq-R
 
 %description
-contexts including the R console, 'R Markdown' documents, and 'Shiny'
-    web applications.
+No detailed description available
 
 %prep
 %setup -q -c -n htmlwidgets
@@ -30,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538597183
+export SOURCE_DATE_EPOCH=1552841238
 
 %install
+export SOURCE_DATE_EPOCH=1552841238
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538597183
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -69,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library htmlwidgets|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  htmlwidgets || :
 
 
 %files
