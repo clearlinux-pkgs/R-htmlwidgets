@@ -4,17 +4,12 @@
 #
 Name     : R-htmlwidgets
 Version  : 1.3
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/htmlwidgets_1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlwidgets_1.3.tar.gz
 Summary  : HTML Widgets for R
 Group    : Development/Tools
 License  : MIT
-Requires: R-httpuv
-Requires: R-markdown
-Requires: R-mime
-Requires: R-xtable
-Requires: R-yaml
 BuildRequires : R-htmltools
 BuildRequires : R-httpuv
 BuildRequires : R-jsonlite
@@ -36,10 +31,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552841238
+export SOURCE_DATE_EPOCH=1552893988
 
 %install
-export SOURCE_DATE_EPOCH=1552841238
+export SOURCE_DATE_EPOCH=1552893988
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
