@@ -4,24 +4,23 @@
 #
 Name     : R-htmlwidgets
 Version  : 1.3
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/htmlwidgets_1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlwidgets_1.3.tar.gz
 Summary  : HTML Widgets for R
 Group    : Development/Tools
 License  : MIT
+Requires: R-htmltools
+Requires: R-jsonlite
+Requires: R-yaml
 BuildRequires : R-htmltools
-BuildRequires : R-httpuv
 BuildRequires : R-jsonlite
-BuildRequires : R-markdown
-BuildRequires : R-mime
-BuildRequires : R-shiny
-BuildRequires : R-xtable
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
 
 %description
-No detailed description available
+contexts including the R console, 'R Markdown' documents, and 'Shiny'
+    web applications.
 
 %prep
 %setup -q -c -n htmlwidgets
@@ -30,13 +29,13 @@ No detailed description available
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552893988
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1568749221
 
 %install
-export SOURCE_DATE_EPOCH=1552893988
+export SOURCE_DATE_EPOCH=1568749221
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -65,12 +64,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  htmlwidgets || :
+R CMD check --no-manual --no-examples --no-codoc htmlwidgets || :
 
 
 %files

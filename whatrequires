@@ -1,17 +1,17 @@
 # This file contains recursive sources that require this package
 R-DT
-R-Hmisc
-R-SGP
+R-PerformanceAnalytics
 R-colourpicker
 R-dygraphs
 R-htmlTable
 R-leaflet
 R-listviewer
 R-manipulateWidget
+R-modest
 R-plotly
 R-reactR
 R-rgl
-R-rglwidget
 R-rhandsontable
+R-rms
 R-threejs
 R-visNetwork
