@@ -4,7 +4,7 @@
 #
 Name     : R-htmlwidgets
 Version  : 1.5.1
-Release  : 30
+Release  : 31
 URL      : https://cran.r-project.org/src/contrib/htmlwidgets_1.5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlwidgets_1.5.1.tar.gz
 Summary  : HTML Widgets for R
@@ -12,34 +12,36 @@ Group    : Development/Tools
 License  : MIT
 Requires: R-htmltools
 Requires: R-jsonlite
+Requires: R-shiny
 Requires: R-yaml
 BuildRequires : R-htmltools
 BuildRequires : R-jsonlite
 BuildRequires : R-shiny
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-No detailed description available
+contexts including the R console, 'R Markdown' documents, and 'Shiny'
+    web applications.
 
 %prep
 %setup -q -c -n htmlwidgets
+cd %{_builddir}/htmlwidgets
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571843831
+export SOURCE_DATE_EPOCH=1589768990
 
 %install
-export SOURCE_DATE_EPOCH=1571843831
+export SOURCE_DATE_EPOCH=1589768990
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

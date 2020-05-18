@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 R-DT
-R-PerformanceAnalytics
 R-colourpicker
 R-dygraphs
 R-htmlTable
@@ -12,6 +11,5 @@ R-plotly
 R-reactR
 R-rgl
 R-rhandsontable
-R-rms
 R-threejs
 R-visNetwork
