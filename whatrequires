@@ -1,13 +1,17 @@
 # This file contains recursive sources that require this package
 R-DT
+R-DiagrammeR
 R-colourpicker
 R-dygraphs
+R-formattable
 R-htmlTable
 R-leaflet
 R-listviewer
 R-manipulateWidget
 R-plotly
+R-reactable
 R-rgl
 R-rhandsontable
+R-sparkline
 R-threejs
 R-visNetwork
