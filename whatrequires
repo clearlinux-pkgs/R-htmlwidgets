@@ -8,6 +8,7 @@ R-htmlTable
 R-leaflet
 R-listviewer
 R-manipulateWidget
+R-pkgdown
 R-plotly
 R-reactable
 R-rgl
