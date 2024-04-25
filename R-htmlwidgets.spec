@@ -7,7 +7,7 @@
 #
 Name     : R-htmlwidgets
 Version  : 1.6.4
-Release  : 62
+Release  : 63
 URL      : https://cran.r-project.org/src/contrib/htmlwidgets_1.6.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/htmlwidgets_1.6.4.tar.gz
 Summary  : HTML Widgets for R
